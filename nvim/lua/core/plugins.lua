@@ -13,10 +13,13 @@ local packer_bootstrap = ensure_packer()
 
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
+  use 'williamboman/mason.nvim'
   use { "catppuccin/nvim", as = "catppuccin" }
   use 'nvim-tree/nvim-tree.lua'
   use 'nvim-tree/nvim-web-devicons'
   use 'nvim-lualine/lualine.nvim'
+  use 'neovim/nvim-lspconfig'
+  use 'iamcco/markdown-preview.nvim'
   
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
