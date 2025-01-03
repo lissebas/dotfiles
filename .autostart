@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Start notify daemond
+dunst
+# Start compositor
+picom &
+# Set wallpaper
+feh --bg-fill ~/Pictures/Wallpapers/02.jpg
