@@ -3,7 +3,7 @@ from libqtile.lazy import lazy
 
 from keys import mod, keys
 
-groups = [Group(i) for i in ['󰈹', '󰉋', '', '󰛸', '󰒋','󰓇']]
+groups = [Group(i) for i in ['NET', 'MEDIA', 'DEV', 'MUSIC', 'SERVERS']]
 
 for i, group in enumerate(groups):
     
