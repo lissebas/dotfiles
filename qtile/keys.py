@@ -48,11 +48,11 @@ keys = [
 
     # Keys system hotkeys
     # Brightness
-    Key([], 'XF86MonBrightnessDown', lazy.spawn('brightnessctl s 2%-')),
-    Key([], 'XF86MonBrightnessUp', lazy.spawn('brightnessctl s 2%+')),
+    Key([], 'XF86MonBrightnessDown', lazy.spawn('bash -c "brightnessctl s 2%- & sh ~/.config/scripts/ShowBrightness.sh"')),
+    Key([], 'XF86MonBrightnessUp', lazy.spawn('bash -c "brightnessctl s 2%+ & sh ~/.config/scripts/ShowBrightness.sh"')),
     
     # Audio
-    Key([], 'XF86AudioRaiseVolume', lazy.spawn('amixer -D pulse sset Master 2%+')),
-    Key([], 'XF86AudioLowerVolume', lazy.spawn('amixer -D pulse sset Master 2%-')),
+    Key([], 'XF86AudioRaiseVolume', lazy.spawn('bash -c "amixer -D pulse sset Master 2%+ & sh ~/.config/scripts/ShowVolume.sh"')),
+    Key([], 'XF86AudioLowerVolume', lazy.spawn('bash -c "amixer -D pulse sset Master 2%- & sh ~/.config/scripts/ShowVolume.sh"')),
     Key([], 'XF86AudioMute', lazy.spawn('amixer -D pulse sset Master toggle')),    
 ]

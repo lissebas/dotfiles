@@ -1,16 +1,14 @@
 #!/bin/sh
-# configuration setting for sigir's laptop
+# Setting by sigir
 
 # Set monitor
- xrandr --auto
-#xrandr --output eDP-1 --mode 1366x768 --output HDMI-1 --mode 1440x900 --same-as eDP-1
-
+xrandr --auto
 
 # Active compositor
 picom &
 
 # Set wallpaper
-feh --bg-fill ~/Pictures/Wallpapers/05.png
+feh --bg-fill ~/Pictures/Wallpapers/04.jpg
 
 # Active notify daemon
 dunst &
