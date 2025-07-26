@@ -22,8 +22,8 @@ def network_widget(network_status):
             foreground = '#24273a',
             padding = 6,
         )
-"""
-def sink_widget(get_sink)
+
+def sink_widget(get_sink):
 
     return widget.GenPollText(
             func = get_sink,
@@ -33,4 +33,3 @@ def sink_widget(get_sink)
             padding = 6,
         )
 
-"""

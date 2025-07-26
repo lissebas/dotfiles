@@ -1,0 +1,8 @@
+{
+  "sound": {
+    "alsa_output.pci-0000_04_00.6.analog-stereo": " ",
+    "alsa_output.pci-0000_04_00.1.hdmi-stereo": "󰡁",
+    "bluetooth": "󰥰 ",
+    "aux": " "
+  }
+}

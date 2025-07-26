@@ -2,7 +2,7 @@ import psutil
 import socket
 import subprocess
 import json
-
+import os
 
 # Check Network Status
 def is_connected():
@@ -38,17 +38,17 @@ def get_connection_interface():
 
 
 
-"""
 # Check sound output
 def get_sound_interface():
     
     try:
-        with open('.envVars/outputMedia.json', 'r') as f:
+        path = os.path.expanduser('~/.config/.envVars/outputMedia.json')
+        with open(path, 'r') as f:
             output_data = json.load(f)
 
         sink = subprocess.check_output(['pactl', 'get-default-sink'], text=True).strip()
-        return output_data['sound'].get(sink, '󰖁 Unknown')
+        return str(output_data['sound'].get(sink))
     except Exception:
-        return '󰖁 Unknown'
+        return subprocess.check_output(['pactl', 'get-default-sink'], text=True).strip()
+        #return '󰖁 Unknown'
 
-"""

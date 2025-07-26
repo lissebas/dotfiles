@@ -1,8 +1,9 @@
 from libqtile import bar, layout, widget
 from libqtile.config import Click, Drag, Match, Screen
 
-from Components.screens import power_line, network_widget#, sink_widget
-from Components.utils import get_connection_interface#, get_sound_interface
+from Components.screens import power_line, network_widget, sink_widget
+from Components.utils import get_connection_interface,  get_sound_interface
+
 
 widgets = [
 
@@ -81,7 +82,7 @@ widgets = [
     ),
 
     # volume
-#    sink_widget(get_sound_interface),
+    sink_widget(get_sound_interface),
   
     widget.Volume(
         background='#89b4fa',
